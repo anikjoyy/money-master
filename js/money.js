@@ -14,7 +14,7 @@ function getExpensesValue(inputValue) {
   const inputAmountText = inputField.value;
   const amountValue = parseFloat(inputAmountText);
 
-  //inputField.value = '';
+  inputField.value = '';
   return amountValue;
 }
 
@@ -72,7 +72,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
   let saveAmountText = saveField.value;
   let saveAmountValue = parseFloat(saveAmountText);
 
-  //saveField.value = '';
+  saveField.value = '';
 
   //save percentage calcultation
   let incomePercentage = incomeValue * 0.1;

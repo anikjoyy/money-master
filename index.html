@@ -20,7 +20,7 @@
 
 <body>
     <header class="mt-5">
-        <h1 class="text-center text-primary fw-bold fs-1">Money Prodigy <i class="fa-solid fa-sack-dollar"></i></h1>
+        <h1 class="text-center text-primary fw-bold fs-1">Money Prodigy <i class="fa-light fa-sack-dollar"></i></h1>
     </header>
     <section class="mt-5">
         <div class="container">
@@ -30,11 +30,11 @@
                     <img class="img-fluid h-75" src="images/image-1.jpg" alt="Money">
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-sm-6 bg-light">
 
                     <!-- Form starts form here -->
                     <div>
-                        <h3 class="text-center fw-bold mb-3">Income</h3>
+                        <h3 class="text-center fw-bold mt-3 mb-3">Income</h3>
 
                         <!-- income field -->
                         <div class="row mb-3">
@@ -70,7 +70,9 @@
                             </div>
                         </div>
 
-                        <button id="calculate-btn" class="btn btn-primary px-5 mt-3 mb-5">Calculate</button>
+                        <div class="text-center">
+                            <button id="calculate-btn" class="btn btn-primary  px-5 mt-3 mb-5">Calculate</button>
+                        </div>
 
                         <div class="row mb-3 text-center">
                             <h3 class="mb-3 fw-bold">Total Expenses: <span id="total-expenses">00</span></h3>
@@ -96,7 +98,7 @@
                         <!-- save text section -->
                         <div class="row mb-3 text-center">
                             <h3 class="mb-3 fw-bold">Saving Amount: <span id="saving-amount">00</span></h3>
-                            <h3 class="fw-bold">Remaining Balance: <span id="remaining-balance">00</span></h3>
+                            <h3 class="fw-bold">Remaining Balance: <span id="remaining-balance"></span></h3>
                         </div>
                     </div>
                     <!-- Form ends  here -->
