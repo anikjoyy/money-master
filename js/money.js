@@ -74,12 +74,20 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
   saveField.value = '';
 
-  //save percentage calcultation
-  let incomePercentage = incomeValue * 0.1;
-  let savingPercentage = saveAmountValue * 0.1;
-  let savingValue = (incomePercentage * savingPercentage).toFixed(2);
+  //checking if user give an unexpected save amount
+  if (saveAmountValue >= 0 || saveAmountValue == 'Number') {
+    //save percentage calcultation
+    let incomePercentage = incomeValue * 0.1;
+    let savingPercentage = saveAmountValue * 0.1;
+    let savingValue = (incomePercentage * savingPercentage).toFixed(2);
 
-  //showing the saving amount
-  let savingAmount = document.getElementById('saving-amount');
-  savingAmount.innerText = savingValue;
+    //showing the saving amount
+    let savingAmount = document.getElementById('saving-amount');
+    savingAmount.innerText = savingValue;
+  } else {
+    window.alert('Invalid Input!! Please Give an Positive Number.');
+  }
+
+  //showing remaining balance
+  let remainingBalanceField = document.getElementById('remaining-balance');
 });
