@@ -3,6 +3,8 @@ function getIncomeValue(incomeAmount) {
   const incomeField = document.getElementById(incomeAmount);
   const incomeAmountText = incomeField.value;
   const incomeAmountValue = parseFloat(incomeAmountText);
+
+  //incomeField.value = '';
   return incomeAmountValue;
 }
 
@@ -12,7 +14,7 @@ function getExpensesValue(inputValue) {
   const inputAmountText = inputField.value;
   const amountValue = parseFloat(inputAmountText);
 
-  inputField.value = '';
+  //inputField.value = '';
   return amountValue;
 }
 
@@ -49,9 +51,10 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
       window.alert('Error!!Your Expenses cant be greater than your Income.');
     } else {
       totalExpenses.innerText = allExpenses;
+
       //after expenses remaining balance calcultation
       let balance = document.getElementById('balance');
-      balance.innerText = incomeValue - parseFloat(totalExpenses.innerText);
+      balance.innerText = incomeValue - parseFloat(allExpenses);
     }
   } else {
     window.alert('Invalid Input!! Please Give an Positive Number.');
@@ -61,3 +64,22 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 /* -----------------------------------
 saving section
 ------------------------------------ */
+document.getElementById('save-btn').addEventListener('click', function () {
+  // taking income amount
+  let incomeValue = getIncomeValue('income-input');
+
+  let saveField = document.getElementById('save-input');
+  let saveAmountText = saveField.value;
+  let saveAmountValue = parseFloat(saveAmountText);
+
+  //saveField.value = '';
+
+  //save percentage calcultation
+  let incomePercentage = incomeValue * 0.1;
+  let savingPercentage = saveAmountValue * 0.1;
+  let savingValue = (incomePercentage * savingPercentage).toFixed(2);
+
+  //showing the saving amount
+  let savingAmount = document.getElementById('saving-amount');
+  savingAmount.innerText = savingValue;
+});
