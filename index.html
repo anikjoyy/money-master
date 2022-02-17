@@ -22,6 +22,88 @@
     <header class="mt-5">
         <h1 class="text-center text-primary fw-bold fs-1">Money Prodigy <i class="fa-solid fa-sack-dollar"></i></h1>
     </header>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <img class="img-fluid h-75" src="images/image-1.jpg" alt="Money">
+                </div>
+
+                <div class="col-sm-6">
+
+                    <!-- Form starts form here -->
+                    <div>
+                        <h3 class="text-center fw-bold mb-3">Income</h3>
+
+                        <!-- income field -->
+                        <div class="row mb-3">
+                            <label for="income" class="col-sm-2 col-form-label">Income:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="income-input">
+                            </div>
+                        </div>
+
+                        <h3 class="text-center fw-bold mb-3">Expenses</h3>
+
+                        <!-- food field -->
+                        <div class="row mb-3">
+                            <label for="food" class="col-sm-2 col-form-label">Food:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="food-input">
+                            </div>
+                        </div>
+
+                        <!-- rent field -->
+                        <div class="row mb-3">
+                            <label for="rent" class="col-sm-2 col-form-label">Rent:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="rent-input">
+                            </div>
+                        </div>
+
+                        <!-- clothes field -->
+                        <div class="row mb-3">
+                            <label for="clothes" class="col-sm-2 col-form-label">Clothes:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="clothes-input">
+                            </div>
+                        </div>
+
+                        <button id="calculate-btn" class="btn btn-primary px-5 my-3">Calculate</button>
+
+                        <div class="row mb-3 text-center">
+                            <h3 class="mb-3">Total Expenses: <span id="total-expenses">0</span></h3>
+                            <h3 class="mb-3">Balance: <span id="balance">0</span></h3>
+                        </div>
+
+                        <!-- save button area -->
+                        <div class="row g-3 align-items-center mb-5">
+                            <div class="col-auto">
+                                <label for="save" class="col-form-label">Save:</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="save-input" class="form-control">
+                            </div>
+                            <div class="col-auto">
+                                <span id="percentage" class="form-text">%</span>
+                            </div>
+                            <div class="col-auto">
+                                <button id="save-btn" class="btn btn-primary px-5">Save</button>
+                            </div>
+                        </div>
+
+                        <!-- save text section -->
+                        <div class="row mb-3 text-center">
+                            <h3 class="mb-3">Saving Amount: <span id="saving-amount">0</span></h3>
+                            <h3>Remaining Balance: <span id="remaining-balance">0</span></h3>
+                        </div>
+                    </div>
+                    <!-- Form ends  here -->
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
